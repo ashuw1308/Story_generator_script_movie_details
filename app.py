@@ -10,7 +10,6 @@ from langchain.utilities import WikipediaAPIWrapper
 
 import environ
 
-
 env = environ.Env()
 environ.Env.read_env()
 
@@ -37,7 +36,6 @@ theme_template = PromptTemplate(
 # Memory
 character_memory = ConversationBufferMemory(input_key='topic', memory_key='chat_history')
 theme_memory = ConversationBufferMemory(input_key='title', memory_key='chat_history')
-
 
 # Llms
 llm = OpenAI(temperature=0.9)
